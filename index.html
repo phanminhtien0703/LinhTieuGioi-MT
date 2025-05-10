@@ -182,7 +182,7 @@
           <div class="swiper-wrapper">
             <img
               class="swiper-slide"
-              src="images/home/sw_2.jpg"
+              src="images/home/sw_1.jpg"
               loading="lazy"
               style="object-fit: cover"
             />
@@ -258,16 +258,16 @@
       }
       function onSqClick() {
         if (isiOSFunc()) {
-          window.open("#", "_blank");
+          window.open("https://www.facebook.com/linhtieugioi", "_blank");
         } else {
-          window.open("#", "_blank");
+          window.open("https://www.facebook.com/linhtieugioi", "_blank");
         }
       }
       function onFbClick() {
         if (isiOSFunc()) {
-          window.open("https://www.facebook.com/linhgioi4d", "_blank");
+          window.open("https://www.facebook.com/groups/linhtieugioi", "_blank");
         } else {
-          window.open("https://www.facebook.com/linhgioi4d", "_blank");
+          window.open("https://www.facebook.com/groups/linhtieugioi", "_blank");
         }
       }
       const imgs = document.querySelectorAll(".swiper-pagination>img");
@@ -301,6 +301,14 @@
           },
         },
       });
+    </script>
+
+    <script>
+        if (window.location.search.includes("fbclid")) {
+            const url = new URL(window.location);
+            url.searchParams.delete("fbclid");
+            window.history.replaceState({}, document.title, url.pathname + url.search);
+        }
     </script>
   </body>
 </html>
